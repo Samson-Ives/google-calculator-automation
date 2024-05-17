@@ -1,0 +1,1 @@
+Given more time I would investigate an option to load test the calculator and any involved APIS

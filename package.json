@@ -1,0 +1,31 @@
+{
+  "name": "google-calculator-project",
+  "description": "This project will use test automation to test the google calculator",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "google-calculator-test-automation"
+  },
+  "scripts": {
+    "base:test": "cucumber-js test -f @cucumber/pretty-formatter",
+    "test:chrome": "cross-env BROWSER_ENGINE=chromium npm run base:test",
+    "test:firefox": "cross-env BROWSER_ENGINE=firefox npm run base:test",
+    "test:safari": "cross-env BROWSER_ENGINE=webkit npm run base:test",
+    "prettier": "prettier --write '**/*.ts'"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "@playwright/test": "^1.42.1",
+    "@types/pngjs": "^6.0.4",
+    "cross-env": "^7.0.3",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "pixelmatch": "github:mapbox/pixelmatch",
+    "playwright": "^1.44.0",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.4.2"
+  }
+}

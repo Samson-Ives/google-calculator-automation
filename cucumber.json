@@ -1,0 +1,30 @@
+{
+  "default": {
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    },
+    "forceExit": true,
+    "format": [
+      "progress-bar",
+      ["html", "reports/test-results.html"],
+      ["json", "reports/test-results.json"]
+    ],
+    "paths": [
+      "src/tests/component/features/",
+      "src/tests/e2e/math-operations-and-buttons/features/",
+      "src/tests/e2e/search-and-navigation/features/",
+      "src/tests/e2e/test-failure-examples/features/",
+      "src/tests/integration/features/",
+      "src/tests/cucumber-scripts/features/"
+    ],
+    "dryRun": false,
+    "require": [
+      "src/support/hooks/*.ts",
+      "src/config/*.ts",
+      "src/tests/component/step-definitions/*.ts",
+      "src/tests/step-definitions/*.ts",
+      "src/tests/cucumber-scripts/step-definitions/*.ts"
+    ],
+    "requireModule": ["ts-node/register"]
+  }
+}
