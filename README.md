@@ -125,6 +125,8 @@ npm run test:chrome -- --tags '@regression'
 npm run test:firefox -- --tags '@smoke'
 npm run test:safari -- --tags '@load'
 ```
+Note: To run the tests in headless mode update the `src/config/world.ts` file to `export const HEADLESS = isHeadlessCmdArg ?? isHeadlessEnvVar ?? true;`
+
 
 This command runs all *.feature files corresponding to the specified tags in the features directory. Upon completion, a HTML report will be generated in the reports directory. Test failure images and videos are captured and attached to the test report.
 
@@ -133,7 +135,7 @@ This command runs all *.feature files corresponding to the specified tags in the
 Tags allow for the execution of specific test suites or features:
 
 - @noLogin
-- @e2e
+- @e2e - Runs all End to end test cases
 - @navigation
 - @calculator
 - @addition
@@ -142,8 +144,10 @@ Tags allow for the execution of specific test suites or features:
 - @division
 - @percentage
 - @orderOfOperations
-- @regression
-- @smoke
+- @allClear
+- @clearEntry
+- @regression - Recommended to run for all tests expected to pass
+- @smoke - Recommened to run for a smoke test of all features
 - @failureExample - Runs tests that are expected to fail
 
 ## Reporting

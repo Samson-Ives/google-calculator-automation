@@ -37,7 +37,7 @@ const isHeadlessEnvVar = process.env.HEADLESS
   ? process.env.HEADLESS === "true"
   : undefined;
 
-export const HEADLESS = isHeadlessCmdArg ?? isHeadlessEnvVar ?? true;
+export const HEADLESS = isHeadlessCmdArg ?? isHeadlessEnvVar ?? false;
 
 export const browserType = setSelectedBrowser(setBrowser);
 
